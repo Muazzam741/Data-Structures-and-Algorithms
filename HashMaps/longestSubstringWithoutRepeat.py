@@ -11,7 +11,9 @@ def unqueChars(s:str):
             release += 1
 
         memo[currentChar] = 1
+        # if currentChar in memo and memo[currentChar] >= release:
+        #     release = memo[currentChar] + 1
 
-        answer += i - release + 1
+        answer = max(answer,i - release + 1)
 
     return answer
